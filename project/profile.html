@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>_StudentPortal_ - Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">_StudentPortal_</h1>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="profile.html" class="nav-link active">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" onclick="logout()">Logout</a>
+                </li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="profile-page">
+        <div class="container">
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <span id="profileInitial">U</span>
+                </div>
+                <div class="profile-info">
+                    <h1 id="profileName">User Name</h1>
+                    <p class="profile-title">Student Profile</p>
+                    <p class="profile-member">Member since 2025</p>
+                </div>
+                <button class="btn btn-secondary">Edit Profile</button>
+            </div>
+
+            <!-- Profile Content -->
+            <div class="profile-content">
+                <!-- Personal Information -->
+                <div class="profile-section">
+                    <h2>Personal Information</h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Email</span>
+                            <span class="info-value" id="profileEmail">student@example.com</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Phone</span>
+                            <span class="info-value" id="profilePhone">0714554567</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Date of Birth</span>
+                            <span class="info-value" id="profileDOB">May 5, 1999</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Course</span>
+                            <span class="info-value" id="profileCourse">Science</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Academic Information -->
+                <div class="profile-section">
+                    <h2> Academic Information</h2>
+                    <div class="academic-grid">
+                        <div class="academic-card">
+                            <h3>Current Semester</h3>
+                            <p>Fall 2025</p>
+                        </div>
+                        <div class="academic-card">
+                            <h3>GPA</h3>
+                            <p>3.85 / 4.0</p>
+                        </div>
+                        <div class="academic-card">
+                            <h3>Credits Completed</h3>
+                            <p>72 / 120</p>
+                        </div>
+                        <div class="academic-card">
+                            <h3>Expected Graduation</h3>
+                            <p>May 2026</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activities -->
+                <div class="profile-section">
+                    <h2>Recent Activities</h2>
+                    <div class="activities-list">
+                        <div class="activity-item activity-blue">
+                            <div class="activity-content">
+                                <h4>Assignment Submitted</h4>
+                                <p>Computer Science - Data Structures Project</p>
+                                <span class="activity-date">2 days ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item activity-green">
+                            <div class="activity-content">
+                                <h4>Grade Received</h4>
+                                <p>Mathematics - Calculus II Midterm: A-</p>
+                                <span class="activity-date">1 week ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item activity-yellow">
+                            <div class="activity-content">
+                                <h4>Enrollment Confirmation</h4>
+                                <p>Registered for Spring 2026 courses</p>
+                                <span class="activity-date">2 weeks ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // Load user profile data when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            loadUserProfile();
+        });
+    </script>
+</body>
+</html>
